@@ -2,14 +2,14 @@
 
 A public, source-linked product research prototype for investigating why first-time mutual-fund investors do or do not continue SIPs.
 
-The app uses a curated, manually adjudicated set of 20 public-conversation observations and a nine-question evidence index. It shows source links, limitations, theme distribution and research gaps. Optional live AI analysis requires an API key and does not run automatically.
+The app uses a curated, manually adjudicated set of 20 public-conversation observations and a nine-question evidence index. It shows source links, limitations, theme distribution and research gaps. This public deployment is a source-linked, deterministic evidence exploration interface. It does not make live AI API calls. The separate full local prototype supports optional Groq/OpenAI AI classification and synthesis.
 
 ## Deploy
 
 1. Open https://share.streamlit.io/ and create an app from this GitHub repository.
 2. Select branch `main` and entrypoint `app.py`.
 3. Set the visibility to public, and share the generated `*.streamlit.app` URL with mentors.
-4. For optional live AI features, add `GROQ_API_KEY` through Streamlit Secrets rather than GitHub.
+4. No API key is needed for this public evidence explorer. Do not put API keys in GitHub.
 
 ## Research limitations
 
