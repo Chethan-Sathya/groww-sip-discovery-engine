@@ -59,7 +59,7 @@ with tabs[1]:
                 st.markdown(f'[Source discussion]({r["source_url"]})')
 with tabs[2]:
     counts = Counter(r["final_theme_adjudicated"] for r in rows)
-    st.bar_chart(dict(counts), horizontal=True)
+    st.bar_chart([{"Theme": name, "Records": count} for name, count in sorted(counts.items())], x="Theme", y="Records", horizontal=True)
     evaluated = [r for r in rows if r.get("initial_agreement") in ("Match","Mismatch")]
     matched = sum(r["initial_agreement"]=="Match" for r in evaluated)
     st.write(f"Historical AI/manual initial-label agreement: **{matched}/{len(evaluated)}**. This is not a blinded independent benchmark.")
